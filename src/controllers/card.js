@@ -1,7 +1,7 @@
 import Controller from './dom';
 
-export default class CardController extends Controller {
-    
+module.exports = class CardController extends Controller {
+
     constructor (parent) {
         super('<div></div>', parent);
 

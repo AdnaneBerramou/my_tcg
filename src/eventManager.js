@@ -1,15 +1,14 @@
-
-export default class EventManager {
+class EventManager {
 
     constructor () {
         this.mlisteners = {};
-    } 
+    }
 
     trigger (event, payload = {}) {
         if (this.mlisteners[event]) {
             this.mlisteners[event].forEach((el) => {
                 el.call(this, payload);
-            });            
+            });
         }
     }
 
@@ -22,3 +21,5 @@ export default class EventManager {
     }
 
 }
+
+module.exports = EventManager;

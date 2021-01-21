@@ -3,7 +3,7 @@ import ModelFactory from '../models/factory'
 import Controller from './dom';
 import CardController from './card';
 
-export default class DeckController extends Controller {
+module.exports = class DeckController extends Controller {
 
     constructor (selector, parent) {
         super(selector, parent);
@@ -24,7 +24,7 @@ export default class DeckController extends Controller {
         var self = this,
             cardCtrl,
             card;
-        
+
         if (cardState !== undefined) {
             cardCtrl = new CardController(self.parent),
             cardCtrl.setState(cardState);
@@ -37,7 +37,7 @@ export default class DeckController extends Controller {
 
                 self.parent.trigger('newCard', cardCtrl);
             });
-            
+
             setTimeout(function () {
                 cardCtrl.setParent(this);
                 card.addClass('draw');
@@ -49,13 +49,13 @@ export default class DeckController extends Controller {
                 setTimeout(function () {
                     card.addClass('flip');
                     card.offset({"left": (self.parent.getDom().width() / 2) - (card.width() / 2), "top": (card.offset().top + (self.parent.side === "up" ? 1 : -1) * 100) });
-                }, 200);            
-            }              
+                }, 200);
+            }
         }
     }
 
     onEmpty () {
         this.$dom.addClass('empty');
-    }    
+    }
 
 }

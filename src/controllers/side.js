@@ -5,7 +5,7 @@ import HandController from './hand';
 import BoardController from './board';
 import CemetaryController from './cemetary';
 
-export default class SideController extends Controller {
+module.exports = class SideController extends Controller {
 
     constructor(selector, parent) {
         super(selector, parent);
@@ -53,6 +53,6 @@ export default class SideController extends Controller {
             if (typeof oppositeSide === "string") {
                 this.trigger(oppositeSide, payload);
             }
-        }        
+        }
     }
 }

@@ -16,7 +16,7 @@ class Dom extends EventManager {
             }
             this.root = p;
         } else {
-            this.root = this;    
+            this.root = this;
         }
 
         this.mState;
@@ -58,4 +58,4 @@ class Dom extends EventManager {
     }
 }
 
-export default Dom;
+module.exports = Dom;

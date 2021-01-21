@@ -1,6 +1,6 @@
 import Controller from './dom';
 
-export default class HandController extends Controller {
+module.exports = class HandController extends Controller {
 
     constructor (selector, parent) {
         super(selector, parent);
@@ -41,7 +41,7 @@ export default class HandController extends Controller {
 
         var width = this.mCards.length * 110,
             start = this.parent.getDom().width() / 2 - width / 2,
-            topPosition = this.getSide() === "down" ? 
+            topPosition = this.getSide() === "down" ?
                 this.parent.getDom().height() - 70 :
                 - 70;
 

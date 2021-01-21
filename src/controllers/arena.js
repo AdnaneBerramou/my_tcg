@@ -6,12 +6,12 @@ import SideController from './side';
 
 var secondClick = false;
 
-export default class ArenaController extends Controller {
+module.exports = class ArenaController extends Controller {
 
     constructor () {
         super('body');
 
-        
+
         this.up = new SideController(".side.opponent", this);
         this.down = new SideController(".side.player", this);
 
@@ -39,7 +39,7 @@ export default class ArenaController extends Controller {
 
         if (self.game[s].deck.getCardsCount() === 0) {
             self.trigger('emptyDeck');
-        }              
+        }
     }
 
 

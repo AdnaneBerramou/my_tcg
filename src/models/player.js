@@ -1,6 +1,6 @@
 import ModelFactory from './factory';
 
-export default class Player {
+module.exports = class Player {
 
     constructor(config) {
         this.type = config.type;

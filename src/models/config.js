@@ -2,7 +2,7 @@ import GameModel from './game';
 import DeckModel from './deck';
 import PlayerModel from './player';
 
-export default {
+module.exports = {
     "game": {
         "class": GameModel,
         "param": '{}'

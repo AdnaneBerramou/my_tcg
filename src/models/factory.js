@@ -2,7 +2,7 @@ import models from './config'
 
 var env = "prod";
 
-export default {
+module.exports = {
 
     setEnv: function (paramEnv = 'prod') {
         env = paramEnv;

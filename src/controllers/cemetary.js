@@ -1,6 +1,6 @@
 import Controller from './dom';
 
-export default class CemeteryController extends Controller {
+module.exports = class CemeteryController extends Controller {
     constructor (selector, parent) {
         super(selector, parent);
 

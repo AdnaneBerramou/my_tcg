@@ -1,12 +1,12 @@
 import Controller from './dom';
 
-export default class BoardController extends Controller {
+module.exports = class BoardController extends Controller {
     constructor (selector, parent) {
         super(selector, parent);
 
         this.mCards = [];
         this.mActiveCard = null;
-        
+
         this.on('clickCard', this.onClickCard.bind(this));
 
         this.parent.on('playCard', this.onPlayCard.bind(this));
@@ -50,7 +50,7 @@ export default class BoardController extends Controller {
 
             $this.removeClass('play');
         });
-        
+
         card.getDom().addClass('play');
 
         if (this.getSide() === "up") {
@@ -105,7 +105,7 @@ export default class BoardController extends Controller {
 
     onDiscardCard (card) {
         this.mCards.splice(card.getState().position, 1);
-        card.getDom().removeClass('board');        
+        card.getDom().removeClass('board');
     }
 
 }

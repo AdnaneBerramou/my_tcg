@@ -6,8 +6,7 @@ class Deck {
     shuffle () {
         let beforeShuffle = [...this.cards];
 
-        this.cards.sort(() => Math.random() - 0.5);
-        this.cards.sort(() => Math.random() - 0.5);
+        for (let i = 0; i < 5; i++) this.cards.sort(() => Math.random() - 0.5);
 
         return !beforeShuffle.every((v, k) => v === this.cards[k]);
     }
