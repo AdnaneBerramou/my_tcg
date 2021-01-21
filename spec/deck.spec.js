@@ -23,6 +23,6 @@ describe('Deck', () => {
     });
 
     it('should be able to return the cards count', () => {
-        expect(deck.getCardsCount()).not.toEqual(false);
+        expect(deck.getCardsCount()).toMatch(/\d{1,}/);
     });
 });
