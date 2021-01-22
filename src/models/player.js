@@ -1,12 +1,17 @@
+const ModelFactory = require('./factory.js');
 const Pawn = require('./pawn.js');
+
+console.log(ModelFactory);
 
 class Player extends Pawn {
     constructor(config) {
         super();
         this.deck = config.deck;
+        this.type = config.type;
         this.board = config.board;
         this.hand = config.hand;
         this.cemetary = config.cemetary;
+        // this.deck = ModelFactory.get('deck');
     }
 
     shuffle(type = 'deck') {

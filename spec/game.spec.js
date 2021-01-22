@@ -61,14 +61,6 @@ describe('Game', () => {
         expect(changedTurn).toEqual(expectedTurn);
     });
 
-    xit('should be able to pick the first game card and remove it from the cards proprety', () => {
-        let cardsCopy = [...game.cards];
-        let pickedUpCard = game.draw();
-
-        expect(pickedUpCard).toEqual(cardsCopy[0]);
-        expect(game.cards.includes(pickedUpCard)).toEqual(false);
-    });
-
     it('should be able to execute a player method with the parameters sended', () => {
         // here i will test the shuffle method, on the down player, with the parameter "cemetary"
         let cardsCopy = [...game.down.cemetary.cards];

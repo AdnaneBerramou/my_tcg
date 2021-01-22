@@ -1,9 +1,8 @@
-import models from './config'
+const models = require('./config');
 
 var env = "prod";
 
 module.exports = {
-
     setEnv: function (paramEnv = 'prod') {
         env = paramEnv;
     },
