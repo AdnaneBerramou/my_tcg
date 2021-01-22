@@ -11,8 +11,12 @@ class Deck {
         return !beforeShuffle.every((v, k) => v === this.cards[k]);
     }
 
-    insertAt(card, position) {
-        this.cards.splice(position, 0, card);
+    insertAt(card, position = null) {
+        if (position === null) {
+            this.cards.push(card);
+        } else {
+            this.cards.splice(position, 0, card);
+        }
 
         return this.cards[position] === card ? true : false;
     }

@@ -1,6 +1,6 @@
-import GameModel from './game';
-import DeckModel from './deck';
-import PlayerModel from './player';
+const GameModel = require('./game.js');
+const DeckModel = require('./deck.js');
+const PlayerModel = require('./player.js');
 
 module.exports = {
     "game": {

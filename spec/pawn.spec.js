@@ -13,9 +13,9 @@ describe('Pawn', () => {
     let def;
 
     beforeEach(() => {
-        life = 100;
-        strength = 15;
-        def = 20;
+        life = (Math.random() * 1000).toFixed();
+        strength = (Math.random() * 100).toFixed();
+        def = (Math.random() * 100).toFixed();
         pawn = new ExtendedPawn(life, strength, def);
     });
 
