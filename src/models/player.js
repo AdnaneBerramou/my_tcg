@@ -1,8 +1,6 @@
 const ModelFactory = require('./factory.js');
 const Pawn = require('./pawn.js');
 
-console.log(ModelFactory);
-
 class Player extends Pawn {
     constructor(config) {
         super();
